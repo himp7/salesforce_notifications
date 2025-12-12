@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Salesforce Notification Settings</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #f4f6f9;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #032d60;
+      margin-top: 0;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 500;
+      color: #080707;
+    }
+    input[type="text"], input[type="password"], textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #c9c9c9;
+      border-radius: 4px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+    textarea {
+      min-height: 80px;
+      font-family: inherit;
+    }
+    button {
+      padding: 12px 24px;
+      background-color: #0176d3;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+    button:hover {
+      background-color: #014486;
+    }
+    .btn-secondary {
+      background-color: #f3f3f3;
+      color: #080707;
+    }
+    .btn-secondary:hover {
+      background-color: #e5e5e5;
+    }
+    .help-text {
+      font-size: 12px;
+      color: #706e6b;
+      margin-top: 5px;
+    }
+    .alert {
+      padding: 12px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+      display: none;
+    }
+    .alert.success {
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+    .alert.error {
+      background-color: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+    .section {
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+    .section:last-child {
+      border-bottom: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Salesforce Notification Settings</h1>
+    
+    <div id="alertBox" class="alert"></div>
+    
+    <div class="section">
+      <h2>Connection Settings</h2>
+      
+      <div class="form-group">
+        <label for="instanceUrl">Salesforce Instance URL</label>
+        <input type="text" id="instanceUrl" placeholder="https://mindful-fox-4uuhj2-dev-ed.trailblaze.my.salesforce.com">
+        <div class="help-text">Your Salesforce org URL (without trailing slash)</div>
+      </div>
+      
+      <div class="form-group">
+        <label for="sessionId">Session ID</label>
+        <input type="password" id="sessionId" placeholder="Paste your Salesforce session ID here">
+        <div class="help-text">
+          <strong>How to get Session ID:</strong><br>
+          1. Open Developer Console in Salesforce (Setup → Developer Console)<br>
+          2. Run: <code>System.debug(UserInfo.getSessionId());</code><br>
+          3. Copy the session ID from the log<br>
+          OR use browser console: <code>document.cookie.match(/sid=([^;]+)/)[1]</code>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section">
+      <h2>Notification Filters</h2>
+      
+      <div class="form-group">
+        <label for="recordTypes">Record Types (Optional)</label>
+        <textarea id="recordTypes" placeholder="Enter record types, one per line (leave empty for all)"></textarea>
+        <div class="help-text">Only receive notifications for these record types. Leave empty to receive all.</div>
+      </div>
+    </div>
+    
+    <div>
+      <button id="saveBtn">Save Settings</button>
+      <button id="testBtn" class="btn-secondary">Test Connection</button>
+    </div>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

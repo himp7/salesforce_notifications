@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 300px;
+      padding: 15px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      margin: 0;
+    }
+    h2 {
+      margin: 0 0 15px 0;
+      font-size: 18px;
+      color: #032d60;
+    }
+    .status {
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+    .status.connected {
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+    .status.disconnected {
+      background-color: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 8px;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+    .btn-primary {
+      background-color: #0176d3;
+      color: white;
+    }
+    .btn-primary:hover {
+      background-color: #014486;
+    }
+    .btn-secondary {
+      background-color: #f3f3f3;
+      color: #080707;
+    }
+    .btn-secondary:hover {
+      background-color: #e5e5e5;
+    }
+    .info {
+      font-size: 12px;
+      color: #706e6b;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Salesforce Notifications</h2>
+  
+  <div id="statusContainer">
+    <div class="status disconnected">
+      <strong>Status:</strong> <span id="statusText">Checking...</span>
+    </div>
+  </div>
+  
+  <button class="btn-primary" id="reconnectBtn">Reconnect</button>
+  <button class="btn-secondary" id="settingsBtn">Settings</button>
+  
+  <div class="info">
+    Listening for Case updates from Salesforce Platform Events
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Salesforce Case Notifications",
+  "version": "1.0.0",
+  "description": "Receive real-time notifications for Salesforce case updates via Platform Events",
+  "permissions": [
+    "notifications",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://*.salesforce.com/*",
+    "https://*.my.salesforce.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html"
+}

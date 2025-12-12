@@ -10,7 +10,7 @@ A Chrome browser extension that delivers instant push notifications for Salesfor
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
 - [Features](#features)
@@ -64,7 +64,7 @@ This browser extension connects directly to Salesforce's Streaming API to delive
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -156,7 +156,7 @@ salesforce-notifications/
 
 ---
 
-## ⚙️ Salesforce Setup
+##  Salesforce Setup
 
 ### Step 1: Create Platform Event
 
@@ -285,7 +285,7 @@ If connection drops:
 
 ---
 
-## 📁 File Structure
+##  File Structure
 
 ### Core Files
 
@@ -376,7 +376,7 @@ User clicks icon → popup.js → Displays notifications
 
 ---
 
-## 🗺️ Production Roadmap
+##  Production Roadmap
 
 ### Phase 1: MVP (4-6 weeks)
 - [ ] OAuth 2.0 authentication with auto token refresh
@@ -430,7 +430,7 @@ Please include:
 
 ---
 
-## 📊 Technical Specifications
+##  Technical Specifications
 
 ### Performance
 - **Connection Latency:** < 2 seconds
@@ -443,9 +443,9 @@ Please include:
 - **Browser Limits:** No practical limit on Chrome extensions
 
 ### Security
-- ✅ Uses standard Salesforce authentication
-- ✅ Respects user permissions (row-level security)
-- ✅ No data stored outside Salesforce
-- ✅ HTTPS encrypted communication
-- ✅ Chrome secure storage for credentials
+-  Uses standard Salesforce authentication
+-  Respects user permissions (row-level security)
+-  No data stored outside Salesforce
+-  HTTPS encrypted communication
+-  Chrome secure storage for credentials
 

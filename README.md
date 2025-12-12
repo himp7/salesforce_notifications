@@ -23,8 +23,6 @@ A Chrome browser extension that delivers instant push notifications for Salesfor
 - [File Structure](#file-structure)
 - [Troubleshooting](#troubleshooting)
 - [Production Roadmap](#production-roadmap)
-- [Contributing](#contributing)
-- [License](#license)
 
 ---
 
@@ -398,7 +396,7 @@ User clicks icon → popup.js → Displays notifications
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Please follow these guidelines:
 

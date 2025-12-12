@@ -116,8 +116,8 @@ This browser extension connects directly to Salesforce's Streaming API to delive
 Clone this repository or download the ZIP:
 
 ```bash
-git clone https://github.com/your-org/salesforce-notifications-extension.git
-cd salesforce-notifications-extension
+git clone https://github.com/your-org/salesforce-notifications.git
+cd salesforce-notifications
 ```
 
 ### Step 2: Verify File Structure
